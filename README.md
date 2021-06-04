@@ -21,7 +21,7 @@ following example:
 ```hcl
 module "address-fe" {
   source  = "terraform-google-modules/address/google"
-  version = "0.1.0"
+  version = "3.0.0"
 
   project_id = "gcp-network"
   region = "us-west1"
@@ -54,7 +54,7 @@ If you would prefer to provide the specific IP addresses to be reserved, that ca
 ```hcl
 module "address-fe" {
   source  = "terraform-google-modules/address/google"
-  version = "0.1.0"
+  version = "3.0.0"
 
   subnetwork = "projects/gcp-network/regions/us-west1/subnetworks/dev-us-west1-dynamic"
 
@@ -81,7 +81,7 @@ External IP addresses can be reserved by setting the `global` input var to `true
 ```hcl
 module "address-fe" {
   source  = "terraform-google-modules/address/google"
-  version = "0.1.0"
+  version = "3.0.0"
 
   names  = [ "external-facing-ip"]
   global = true
@@ -98,7 +98,7 @@ managed zone name, the domain registered with Cloud DNS, and setting the
 ```hcl
 module "address-fe" {
   source  = "terraform-google-modules/address/google"
-  version = "0.1.0"
+  version = "3.0.0"
 
   subnetwork           = "projects/gcp-network/regions/us-west1/subnetworks/dev-us-west1-dynamic"
   enable_gcp_dns       = true
@@ -129,7 +129,7 @@ specifying the zone with the `gcp_dns_reverse_zone` input variable:
 ```hcl
 module "address-fe" {
   source  = "terraform-google-modules/address/google"
-  version = "0.1.0"
+  version = "3.0.0"
 
   subnetwork           = "projects/gcp-network/regions/us-west1/subnetworks/dev-us-west1-dynamic"
   enable_gcp_dns       = true
